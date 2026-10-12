@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerPath | Discover Your Interests, Build Your Future</title>
+  <meta name="description" content="Beginner-friendly career guidance platform for students after Class 10 and Class 12. Explore streams, careers, skills, and courses in Technology, Science, Business, Arts, Healthcare, and Teaching.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-logo" aria-label="CareerPath Home">
+        <div class="logo-icon">
+          <i class="fa-solid fa-compass"></i>
+        </div>
+        <div class="logo-text">
+          <span>Career</span><span>Path</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#stream-guide" class="nav-link">Class 10 & 12 Guide</a>
+        <a href="#interests" class="nav-link">Interests</a>
+        <a href="#careers" class="nav-link">Career Explorer</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action items -->
+      <div class="nav-actions">
+        <!-- Bookmark quick drawer button -->
+        <button id="bookmarkFilterBtn" class="action-btn icon-btn" title="View Saved Careers" aria-label="Saved Careers">
+          <i class="fa-solid fa-bookmark"></i>
+          <span class="badge" id="savedCountBadge">0</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggleBtn" class="action-btn icon-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+
+        <!-- Quiz CTA -->
+        <button id="openQuizNavBtn" class="btn btn-primary btn-sm quiz-nav-btn">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span>Career Quiz</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="Open Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- 1. Home / Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Smart Guidance for Class 10th & 12th Students</span>
+          </div>
+
+          <h1 class="hero-title">
+            Discover Your Interests, <br>
+            <span class="gradient-text">Build Your Future</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Confused about which stream to pick after Class 10 or which degree suits you after Class 12? CareerPath gives you clear roadmaps, required skills, and course recommendations tailored to your unique passions.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#careers" class="btn btn-primary btn-lg" id="startNowBtn">
+              <span>Start Now</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <button class="btn btn-secondary btn-lg" id="heroQuizBtn">
+              <i class="fa-solid fa-sparkles"></i>
+              <span>Take 2-Min Career Quiz</span>
+            </button>
+          </div>
+
+          <!-- Quick Stats / Trust Indicators -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">6+</span>
+              <span class="stat-label">Core Career Fields</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">24+</span>
+              <span class="stat-label">Detailed Career Paths</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Free Student Resource</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="floating-card float-card-1">
+              <div class="float-icon tech-bg"><i class="fa-solid fa-laptop-code"></i></div>
+              <div>
+                <strong>Technology</strong>
+                <p>AI, Web, Cyber & Data</p>
+              </div>
+            </div>
+            <div class="floating-card float-card-2">
+              <div class="float-icon med-bg"><i class="fa-solid fa-heart-pulse"></i></div>
+              <div>
+                <strong>Healthcare</strong>
+                <p>Medicine, Biotech & Care</p>
+              </div>
+            </div>
+            <div class="floating-card float-card-3">
+              <div class="float-icon biz-bg"><i class="fa-solid fa-chart-line"></i></div>
+              <div>
+                <strong>Business</strong>
+                <p>Finance, Marketing & Startups</p>
+              </div>
+            </div>
+            <div class="hero-center-graphic">
+              <div class="glow-ring"></div>
+              <i class="fa-solid fa-compass main-compass"></i>
+              <div class="stage-tag stage-10">After 10th: Streams</div>
+              <div class="stage-tag stage-12">After 12th: Degrees</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stream Guide Overview (Class 10 vs Class 12) -->
+    <section class="section stream-guide-section" id="stream-guide">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Education Roadmap</span>
+          <h2 class="section-title">Where Are You Right Now?</h2>
+          <p class="section-subtitle">
+            Every transition brings critical decisions. Select your current academic stage to understand your immediate options.
+          </p>
+        </div>
+
+        <div class="stage-toggle-wrapper">
+          <div class="stage-toggle-pills" role="tablist">
+            <button class="stage-toggle-btn active" data-stage="10" role="tab" aria-selected="true">
+              <i class="fa-solid fa-book-open-reader"></i>
+              <span>After Class 10 (Stream Selection)</span>
+            </button>
+            <button class="stage-toggle-btn" data-stage="12" role="tab" aria-selected="false">
+              <i class="fa-solid fa-user-graduate"></i>
+              <span>After Class 12 (Degrees & Diplomas)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Stage 10 Content Panel -->
+        <div class="stage-content-panel active" id="stage10Panel">
+          <div class="guide-grid">
+            <div class="guide-card">
+              <div class="guide-card-icon science-icon"><i class="fa-solid fa-atom"></i></div>
+              <h3>Science Stream</h3>
+              <p class="guide-desc">Best for problem solvers, tech enthusiasts, and medical aspirants.</p>
+              <ul class="guide-list">
+                <li><strong>PCM (Physics, Chem, Math):</strong> Engineering, Architecture, Computer Science, Aviation, Defense.</li>
+                <li><strong>PCB (Physics, Chem, Bio):</strong> Medicine (MBBS/BDS), Pharmacy, Biotechnology, Nursing, Allied Health.</li>
+                <li><strong>PCMB:</strong> Maximum flexibility for both tech and life sciences.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Science">Explore Science Paths</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-card-icon biz-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <h3>Commerce Stream</h3>
+              <p class="guide-desc">Ideal for numbers, trade, investments, economy, and entrepreneurship.</p>
+              <ul class="guide-list">
+                <li><strong>With Mathematics:</strong> CA, CFA, Investment Banking, Actuarial Science, Economics Honours, B.Com.</li>
+                <li><strong>Without Mathematics:</strong> Business Management (BBA/BMS), Law (BA LLB), Marketing, Accounting, CS.</li>
+                <li><strong>Key Focus:</strong> Financial literacy, business laws, and economics.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Business">Explore Business Paths</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-card-icon arts-icon"><i class="fa-solid fa-palette"></i></div>
+              <h3>Humanities & Arts</h3>
+              <p class="guide-desc">For creative thinkers, communicators, social minds, and analysts.</p>
+              <ul class="guide-list">
+                <li><strong>Core Subjects:</strong> History, Psychology, Sociology, Political Science, Literature, Fine Arts.</li>
+                <li><strong>Pathways:</strong> Civil Services (UPSC), Journalism, Psychology, Law, Design, Content & Media, Public Policy.</li>
+                <li><strong>Key Focus:</strong> Critical thinking, communication, human behavior.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Arts">Explore Arts Paths</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-card-icon tech-icon"><i class="fa-solid fa-gear"></i></div>
+              <h3>Polytechnic & Vocational</h3>
+              <p class="guide-desc">Hands-on technical skill diplomas directly after Class 10.</p>
+              <ul class="guide-list">
+                <li><strong>Polytechnic Diploma:</strong> 3-year diplomas in Mechanical, Civil, Electrical, CS with direct lateral entry to B.Tech 2nd year.</li>
+                <li><strong>Vocational (ITI / Skill Certs):</strong> Graphic Design, Digital Marketing, Hardware & Networking, Culinary Arts.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Technology">Explore Tech Paths</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 12 Content Panel -->
+        <div class="stage-content-panel" id="stage12Panel">
+          <div class="guide-grid">
+            <div class="guide-card">
+              <div class="guide-card-icon tech-icon"><i class="fa-solid fa-microchip"></i></div>
+              <h3>Engineering & Technology</h3>
+              <p class="guide-desc">Degree programs for innovators and builders.</p>
+              <ul class="guide-list">
+                <li><strong>Degrees:</strong> B.Tech / B.E, BCA, B.Sc Computer Science / IT.</li>
+                <li><strong>Key Entrance Exams:</strong> JEE Main/Advanced, BITSAT, State CETs, CUET.</li>
+                <li><strong>Specializations:</strong> AI & Machine Learning, Cybersecurity, Cloud, Robotics, Data Science.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Technology">View Tech Careers</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-card-icon med-icon"><i class="fa-solid fa-stethoscope"></i></div>
+              <h3>Medical & Life Sciences</h3>
+              <p class="guide-desc">Care-driven and scientific healing careers.</p>
+              <ul class="guide-list">
+                <li><strong>Clinical Degrees:</strong> MBBS, BDS, BAMS, BHMS (via NEET-UG).</li>
+                <li><strong>Allied & Research:</strong> B.Sc Nursing, B.Pharm, Physiotherapy (BPT), Biotechnology, Clinical Psychology.</li>
+                <li><strong>High Demand:</strong> Biomedical Engineering, Bioinformatics, Public Health.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Healthcare">View Healthcare Careers</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-card-icon biz-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+              <h3>Management, Finance & Law</h3>
+              <p class="guide-desc">Degrees for leaders, strategists, and problem solvers.</p>
+              <ul class="guide-list">
+                <li><strong>Management & Commerce:</strong> BBA, BMS, B.Com (Hons), Integrated IPM (IIMs via IPMAT).</li>
+                <li><strong>Professional Certifications:</strong> CA, CS, CMA, ACCA.</li>
+                <li><strong>Law:</strong> 5-Year Integrated BA LLB / BBA LLB (via CLAT, AILET).</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Business">View Business Careers</button>
+            </div>
+
+            <div class="guide-card">
+              <div class="guide-card-icon teach-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <h3>Creative Arts, Media & Education</h3>
+              <p class="guide-desc">Expression, storytelling, research, and mentoring.</p>
+              <ul class="guide-list">
+                <li><strong>Design & Media:</strong> B.Des (NIFT, NID, UCEED), Mass Comm & Journalism, Animation/VFX.</li>
+                <li><strong>Education & Research:</strong> Integrated B.Sc B.Ed, BA B.Ed, B.El.Ed, Academic Research.</li>
+                <li><strong>Civil Services & Policy:</strong> BA Honours in Economics, Political Science, History via CUET.</li>
+              </ul>
+              <button class="btn btn-outline btn-sm filter-by-stream" data-filter-interest="Teaching">View Teaching Paths</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. Interest Selection Section -->
+    <section class="section interests-section" id="interests">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Discovery</span>
+          <h2 class="section-title">What Sparks Your Curiosity?</h2>
+          <p class="section-subtitle">
+            Choose an area of interest below to instantly filter career paths and discover courses tailored for you.
+          </p>
+        </div>
+
+        <!-- 6 Interest Cards -->
+        <div class="interests-grid" id="interestCategoriesContainer">
+          
+          <div class="interest-card" data-category="Technology" tabindex="0" role="button" aria-label="Filter by Technology">
+            <div class="interest-icon-box tech-gradient">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="interest-content">
+              <h3>Technology</h3>
+              <p>Coding, Artificial Intelligence, Web Development, Cybersecurity & Gadgets.</p>
+              <span class="career-count-pill" data-count-for="Technology">5 Careers</span>
+            </div>
+            <div class="selection-check"><i class="fa-solid fa-check"></i></div>
+          </div>
+
+          <div class="interest-card" data-category="Science" tabindex="0" role="button" aria-label="Filter by Science">
+            <div class="interest-icon-box science-gradient">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
+            <div class="interest-content">
+              <h3>Science</h3>
+              <p>Experiments, Physics, Space, Chemistry, Environmental & Forensic Research.</p>
+              <span class="career-count-pill" data-count-for="Science">4 Careers</span>
+            </div>
+            <div class="selection-check"><i class="fa-solid fa-check"></i></div>
+          </div>
+
+          <div class="interest-card" data-category="Business" tabindex="0" role="button" aria-label="Filter by Business">
+            <div class="interest-icon-box biz-gradient">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <div class="interest-content">
+              <h3>Business</h3>
+              <p>Finance, Entrepreneurship, Marketing, Economics, Stock Markets & Management.</p>
+              <span class="career-count-pill" data-count-for="Business">4 Careers</span>
+            </div>
+            <div class="selection-check"><i class="fa-solid fa-check"></i></div>
+          </div>
+
+          <div class="interest-card" data-category="Arts" tabindex="0" role="button" aria-label="Filter by Arts">
+            <div class="interest-icon-box arts-gradient">
+              <i class="fa-solid fa-paint-brush"></i>
+            </div>
+            <div class="interest-content">
+              <h3>Arts & Design</h3>
+              <p>UI/UX Design, Animation, Digital Media, Writing, Filmmaking & Psychology.</p>
+              <span class="career-count-pill" data-count-for="Arts">4 Careers</span>
+            </div>
+            <div class="selection-check"><i class="fa-solid fa-check"></i></div>
+          </div>
+
+          <div class="interest-card" data-category="Healthcare" tabindex="0" role="button" aria-label="Filter by Healthcare">
+            <div class="interest-icon-box health-gradient">
+              <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div class="interest-content">
+              <h3>Healthcare</h3>
+              <p>Medicine, Nursing, Biotechnology, Pharmacy, Nutrition & Mental Health.</p>
+              <span class="career-count-pill" data-count-for="Healthcare">4 Careers</span>
+            </div>
+            <div class="selection-check"><i class="fa-solid fa-check"></i></div>
+          </div>
+
+          <div class="interest-card" data-category="Teaching" tabindex="0" role="button" aria-label="Filter by Teaching">
+            <div class="interest-icon-box teach-gradient">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="interest-content">
+              <h3>Teaching & Education</h3>
+              <p>Mentoring, Academic Research, School Education, EdTech & Public Speaking.</p>
+              <span class="career-count-pill" data-count-for="Teaching">3 Careers</span>
+            </div>
+            <div class="selection-check"><i class="fa-solid fa-check"></i></div>
+          </div>
+
+        </div>
+
+        <div class="interest-action-bar">
+          <button id="showAllInterestsBtn" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-list-check"></i>
+            <span>Show All Categories</span>
+          </button>
+          <span class="interest-hint-text">
+            <i class="fa-solid fa-circle-info"></i> Click any card above or use search below to filter career recommendations.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 & 4. Career Recommendations & Cards Section -->
+    <section class="section careers-section" id="careers">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">Explore Opportunities</span>
+          <h2 class="section-title">Career Recommendations & Pathways</h2>
+          <p class="section-subtitle">
+            Explore curated careers, required skills, and course recommendations after Class 10 & Class 12.
+          </p>
+        </div>
+
+        <!-- Filter Controls Bar -->
+        <div class="filter-controls-card">
+          <div class="filter-row-top">
+            <!-- Search input -->
+            <div class="search-box">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text" id="careerSearchInput" placeholder="Search by career, skill (e.g. Python, Design), or course (e.g. BBA, MBBS)..." autocomplete="off">
+              <button id="clearSearchBtn" class="clear-search-btn" title="Clear Search" aria-label="Clear Search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+
+            <!-- Grade / Stage Filter Tabs -->
+            <div class="stage-filter-group">
+              <span class="filter-label"><i class="fa-solid fa-filter"></i> Stage:</span>
+              <div class="pill-group" id="stagePillGroup">
+                <button class="filter-pill active" data-stage-filter="all">All</button>
+                <button class="filter-pill" data-stage-filter="10">After 10th</button>
+                <button class="filter-pill" data-stage-filter="12">After 12th</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Category Filter Pills -->
+          <div class="filter-row-bottom">
+            <div class="category-pills-scroll" id="categoryPillsScroll">
+              <button class="cat-pill active" data-category="all">
+                <i class="fa-solid fa-border-all"></i> All Categories
+              </button>
+              <button class="cat-pill" data-category="Technology">
+                <i class="fa-solid fa-code"></i> Technology
+              </button>
+              <button class="cat-pill" data-category="Science">
+                <i class="fa-solid fa-flask-vial"></i> Science
+              </button>
+              <button class="cat-pill" data-category="Business">
+                <i class="fa-solid fa-chart-pie"></i> Business
+              </button>
+              <button class="cat-pill" data-category="Arts">
+                <i class="fa-solid fa-paint-brush"></i> Arts & Design
+              </button>
+              <button class="cat-pill" data-category="Healthcare">
+                <i class="fa-solid fa-user-doctor"></i> Healthcare
+              </button>
+              <button class="cat-pill" data-category="Teaching">
+                <i class="fa-solid fa-school"></i> Teaching
+              </button>
+            </div>
+
+            <div class="extra-filters">
+              <button id="savedOnlyToggle" class="toggle-saved-btn">
+                <i class="fa-solid fa-bookmark"></i>
+                <span>Bookmarks (<span id="savedCountLabel">0</span>)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Active filters & result summary -->
+          <div class="results-meta-bar">
+            <span id="resultsCountText">Showing 24 careers</span>
+            <button id="resetAllFiltersBtn" class="btn-link">
+              <i class="fa-solid fa-rotate-left"></i> Reset Filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Career Cards Dynamic Grid -->
+        <div class="careers-grid" id="careersGrid">
+          <!-- Cards dynamically injected by script.js -->
+        </div>
+
+        <!-- Empty state when no careers match -->
+        <div class="empty-state hidden" id="emptyState">
+          <div class="empty-state-icon">
+            <i class="fa-regular fa-compass"></i>
+          </div>
+          <h3>No matching careers found</h3>
+          <p>We couldn't find any careers matching your current search or filters. Try clearing your search or switching categories.</p>
+          <button class="btn btn-primary btn-sm" id="emptyStateResetBtn">
+            <i class="fa-solid fa-arrow-rotate-left"></i> View All Careers
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-column">
+            <div class="about-card-box">
+              <div class="about-icon-badge">
+                <i class="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3 class="about-quote">"Your career is not a one-time decision; it's a journey of continuous curiosity."</h3>
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+                  <div>
+                    <h4>No Paid Gates or Signups</h4>
+                    <p>Free, accessible guidance for every high school student.</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+                  <div>
+                    <h4>Real-World Skills Focus</h4>
+                    <p>Guidance on practical skills that recruiters actually look for.</p>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <div class="check-circle"><i class="fa-solid fa-check"></i></div>
+                  <div>
+                    <h4>Clear 10th & 12th Transitions</h4>
+                    <p>Eliminate confusion between streams, degrees, and entrance exams.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-column">
+            <span class="section-tag">About CareerPath</span>
+            <h2 class="section-title">Built to Help Students Navigate Critical Crossroads</h2>
+            <p class="about-lead">
+              Every year, millions of students finish Class 10 and Class 12 feeling overwhelmed by peer pressure, complex entrance exams, and confusing advice.
+            </p>
+            <p class="about-paragraph">
+              <strong>CareerPath</strong> was created to give students a clear, objective, and beginner-friendly roadmap. Whether you're deciding between <em>Science, Commerce, or Arts</em> after 10th, or choosing between <em>B.Tech, MBBS, BBA, Design, or Law</em> after 12th, our platform bridges the gap between your natural interests and high-growth opportunities.
+            </p>
+
+            <div class="about-stats-row">
+              <div class="mini-stat">
+                <h4>Practical</h4>
+                <p>Actionable skills you can start learning today.</p>
+              </div>
+              <div class="mini-stat">
+                <h4>Inclusive</h4>
+                <p>Paths for every talent — technical, creative, & analytical.</p>
+              </div>
+              <div class="mini-stat">
+                <h4>Transparent</h4>
+                <p>Clear entrance exam and course pathways.</p>
+              </div>
+            </div>
+
+            <div class="about-cta">
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-solid fa-envelope"></i> Have a Question? Reach Out
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (Helps students after 10th & 12th) -->
+    <section class="section faq-section" id="faqs">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Got Questions?</span>
+          <h2 class="section-title">Frequently Asked Student Questions</h2>
+          <p class="section-subtitle">
+            Answers to common dilemmas faced by students and parents after Class 10 and Class 12.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How do I choose between Science, Commerce, and Arts after Class 10?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Base your choice on three factors: <strong>your genuine curiosity</strong> (what you enjoy reading without being forced), <strong>your strengths</strong> in school subjects, and <strong>future career goals</strong>. Don't choose Science just because your friends are doing it; Arts and Commerce offer equally high-paying and prestigious careers in Law, Management, Economics, UI/UX Design, and Civil Services.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I switch from Science to Commerce or Arts after Class 12?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Yes, absolutely!</strong> In almost all universities, students who studied Science in 11th and 12th can pursue degrees in Commerce (BBA, B.Com, BMS) or Arts & Humanities (BA, Psychology, Law, Design, Journalism). However, switching from Arts to Science is generally not permitted for engineering or medical degrees.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is Mathematics compulsory for careers in Business, Finance, or Coding?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>While Class 12 Mathematics is required for engineering degrees (B.Tech) and top Economics (Hons) programs, you <em>can</em> enter coding and tech through degrees like BCA or self-taught web development without advanced math. Similarly, fields like Marketing, BBA, Human Resources, and Law do not require 12th Math.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>What high-paying careers exist if I don't want to pursue Engineering or MBBS?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Modern industries offer exceptional paths outside Engineering and Medical: <strong>Corporate Law (via CLAT)</strong>, <strong>Chartered Accountancy (CA)</strong>, <strong>Product & UI/UX Design</strong>, <strong>Investment Banking</strong>, <strong>Clinical Psychology</strong>, <strong>Data Analytics</strong>, and <strong>Digital Content Strategy</strong>.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I do a diploma after Class 10 and join B.Tech directly later?</span>
+              <i class="fa-solid fa-chevron-down faq-chevron"></i>
+            </button>
+            <div class="faq-answer">
+              <p><strong>Yes!</strong> A 3-year Polytechnic Diploma in Engineering allows you to take Lateral Entry exams to join directly into the 2nd year (3rd semester) of a B.Tech / B.E program, bypassing Class 11 and 12 board exams.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card-wrapper">
+          <div class="contact-info-panel">
+            <span class="section-tag light-tag">Student Support</span>
+            <h2 class="contact-panel-title">Need Personalized Advice?</h2>
+            <p class="contact-panel-desc">
+              Have specific questions about streams, colleges, or skill learning? Send us a message and our career mentoring team will guide you.
+            </p>
+
+            <div class="contact-details-list">
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <strong>Email Us</strong>
+                  <p>support@careerpath.edu</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <strong>Student Helpline</strong>
+                  <p>+91 (800) 123-4567</p>
+                </div>
+              </div>
+              <div class="contact-detail-item">
+                <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <strong>Response Time</strong>
+                  <p>Within 24 Hours (Mon - Sat)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="#" class="social-circle" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-panel">
+            <h3 class="form-title">Send a Question</h3>
+            <p class="form-subtitle">Fill in your details and what guidance you are seeking.</p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="contactName">Your Name <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="contactName" name="name" placeholder="e.g. Rahul Sharma" required>
+                </div>
+                <span class="field-error" id="nameError"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactEmail">Email Address <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+                  </div>
+                  <span class="field-error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="studentGrade">Current Class <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <i class="fa-solid fa-graduation-cap input-icon"></i>
+                    <select id="studentGrade" name="grade" required>
+                      <option value="">Select your class</option>
+                      <option value="Class 10">Class 10 Student</option>
+                      <option value="Class 11">Class 11 Student</option>
+                      <option value="Class 12">Class 12 Student</option>
+                      <option value="Parent">Parent / Guardian</option>
+                      <option value="Other">Other / Educator</option>
+                    </select>
+                  </div>
+                  <span class="field-error" id="gradeError"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="guidanceTopic">What do you need help with? <span class="required">*</span></label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-bullseye input-icon"></i>
+                  <select id="guidanceTopic" name="topic" required>
+                    <option value="">Choose a topic</option>
+                    <option value="Class 10 Stream Selection">Stream Selection after Class 10</option>
+                    <option value="Class 12 College & Degree">Degree / College Selection after Class 12</option>
+                    <option value="Entrance Exam Advice">Entrance Exam Roadmap (JEE, NEET, CUET, CLAT)</option>
+                    <option value="Skill & Online Learning">Learning New Skills (Coding, Design, etc.)</option>
+                    <option value="General Query">General Question</option>
+                  </select>
+                </div>
+                <span class="field-error" id="topicError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Your Message / Query <span class="required">*</span></label>
+                <textarea id="contactMessage" name="message" rows="4" placeholder="Tell us about your interests, current subjects, and what confusion you have..." required></textarea>
+                <span class="field-error" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submitContactBtn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Submit Query</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 5. Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="#home" class="brand-logo footer-logo">
+            <div class="logo-icon">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <div class="logo-text">
+              <span>Career</span><span>Path</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            An open, accessible career exploration platform dedicated to guiding Class 10 and Class 12 students towards confident academic and professional decisions.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge"><i class="fa-solid fa-shield-halved"></i> 100% Free</span>
+            <span class="footer-badge"><i class="fa-solid fa-bolt"></i> No Sign-Up Needed</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore Streams</h4>
+          <ul class="footer-links">
+            <li><a href="#careers" class="filter-footer-link" data-cat="Technology">Technology & AI</a></li>
+            <li><a href="#careers" class="filter-footer-link" data-cat="Healthcare">Medical & Health</a></li>
+            <li><a href="#careers" class="filter-footer-link" data-cat="Business">Business & Finance</a></li>
+            <li><a href="#careers" class="filter-footer-link" data-cat="Science">Science & Research</a></li>
+            <li><a href="#careers" class="filter-footer-link" data-cat="Arts">Arts & UI/UX Design</a></li>
+            <li><a href="#careers" class="filter-footer-link" data-cat="Teaching">Education & Mentoring</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#stream-guide">Class 10 vs 12 Guide</a></li>
+            <li><a href="#interests">Interests Finder</a></li>
+            <li><a href="#careers">All Career Roadmaps</a></li>
+            <li><a href="#faqs">Student FAQs</a></li>
+            <li><a href="#about">About CareerPath</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Stay Informed</h4>
+          <p class="newsletter-text">Get weekly advice on upcoming college applications, exams, and free skill workshops.</p>
+          <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); window.CareerApp.handleNewsletter(this);">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Enter student email" required id="newsletterEmail">
+              <button type="submit" class="btn btn-primary btn-sm" aria-label="Subscribe to Newsletter">
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <small class="newsletter-note"><i class="fa-solid fa-lock"></i> No spam. Unsubscribe anytime.</small>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear">2026</span> CareerPath. All rights reserved. Designed for students after Class 10 & 12.</p>
+        <div class="footer-bottom-links">
+          <a href="#home">Privacy Policy</a>
+          <span>•</span>
+          <a href="#home">Terms of Use</a>
+          <span>•</span>
+          <a href="#home">Student Safety</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Career Details Modal -->
+  <div class="modal-overlay" id="careerModalOverlay" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalCareerTitle">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-header">
+        <div class="modal-badges">
+          <span class="modal-cat-badge" id="modalCategoryBadge">Technology</span>
+          <span class="modal-stage-badge" id="modalStageBadge">After Class 12</span>
+          <span class="modal-demand-badge" id="modalDemandBadge"><i class="fa-solid fa-arrow-trend-up"></i> High Growth</span>
+        </div>
+        <h2 class="modal-title" id="modalCareerTitle">Software Engineer</h2>
+        <p class="modal-subtitle" id="modalCareerSubtitle">Design, build, and deploy software applications, websites, and cloud systems.</p>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- Step-by-Step Educational Roadmap -->
+        <div class="modal-section">
+          <h3 class="modal-sec-title"><i class="fa-solid fa-route"></i> Step-by-Step Pathway</h3>
+          <div class="roadmap-timeline" id="modalRoadmapTimeline">
+            <!-- Timeline items injected dynamically -->
+          </div>
+        </div>
+
+        <!-- Required Skills -->
+        <div class="modal-section">
+          <h3 class="modal-sec-title"><i class="fa-solid fa-brain"></i> Essential Skills to Build</h3>
+          <div class="skills-tag-list" id="modalSkillsList">
+            <!-- Skills tags -->
+          </div>
+        </div>
+
+        <!-- Recommended Courses & Entrance Exams -->
+        <div class="modal-grid-2">
+          <div class="modal-box">
+            <h4><i class="fa-solid fa-book-bookmark"></i> Recommended Degrees / Courses</h4>
+            <ul class="modal-checklist" id="modalCoursesList">
+              <!-- Courses -->
+            </ul>
+          </div>
+
+          <div class="modal-box">
+            <h4><i class="fa-solid fa-file-signature"></i> Key Entrance Exams & Tests</h4>
+            <ul class="modal-checklist" id="modalExamsList">
+              <!-- Exams -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Future Scope & Job Roles -->
+        <div class="modal-section">
+          <h3 class="modal-sec-title"><i class="fa-solid fa-briefcase"></i> Popular Job Roles & Industry Scope</h3>
+          <p id="modalScopeText" class="modal-scope-desc"></p>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" id="modalSaveCareerBtn">
+          <i class="fa-regular fa-bookmark" id="modalSaveIcon"></i>
+          <span id="modalSaveText">Bookmark Career</span>
+        </button>
+        <button class="btn btn-primary" id="modalCloseActionBtn">
+          <span>Done</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive 2-Min Career Quiz Modal -->
+  <div class="modal-overlay" id="quizModalOverlay" aria-hidden="true">
+    <div class="modal-dialog quiz-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quizTitle">
+      <button class="modal-close-btn" id="quizCloseBtn" aria-label="Close quiz modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- Quiz Step View -->
+      <div id="quizQuestionView">
+        <div class="quiz-progress-bar-container">
+          <div class="quiz-progress-fill" id="quizProgressFill" style="width: 25%;"></div>
+        </div>
+
+        <div class="quiz-header">
+          <div class="quiz-step-label">Question <span id="currentQuizStep">1</span> of 4</div>
+          <h2 class="quiz-title" id="quizQuestionTitle">What activities do you enjoy most in your free time?</h2>
+        </div>
+
+        <div class="quiz-options-grid" id="quizOptionsContainer">
+          <!-- Dynamic quiz choices -->
+        </div>
+
+        <div class="quiz-nav-row">
+          <button class="btn btn-secondary btn-sm" id="quizBackBtn" disabled>
+            <i class="fa-solid fa-arrow-left"></i> Back
+          </button>
+          <span class="quiz-hint-pill">Select one answer to continue</span>
+        </div>
+      </div>
+
+      <!-- Quiz Result View -->
+      <div id="quizResultView" class="hidden">
+        <div class="quiz-result-hero text-center">
+          <div class="quiz-result-icon">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h2 class="quiz-result-title">Your Top Career Matches!</h2>
+          <p class="quiz-result-sub" id="quizResultDesc">Based on your responses, here are the fields that align best with your strengths:</p>
+
+          <div class="quiz-matched-cards" id="quizMatchedCategories">
+            <!-- Top matches injected here -->
+          </div>
+
+          <div class="quiz-actions-group">
+            <button class="btn btn-primary btn-lg" id="quizApplyFilterBtn">
+              <i class="fa-solid fa-arrow-right"></i> View Recommended Careers
+            </button>
+            <button class="btn btn-outline" id="quizRestartBtn">
+              <i class="fa-solid fa-rotate-left"></i> Retake Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
